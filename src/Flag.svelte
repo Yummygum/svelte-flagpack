@@ -1,8 +1,12 @@
 <script>
-    import Flag from 'flagpack-core'
+  import { isoToCountryCode, imageUrl } from 'flagpack-core'
 
+  export let code = "NL"
+  export let size = "m"
+
+  const url = imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase()).default
 </script>
 
 <div>
-    Hello Flagpack!
+  {@html url}
 </div>

@@ -1,5 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
+import svg from 'rollup-plugin-svg'
+import common from '@rollup/plugin-commonjs'
 
 const pkg = require('./package.json');
 
@@ -11,6 +13,8 @@ export default {
   ],
   plugins: [
     svelte(),
-    resolve()
+    svg(),
+    resolve(),
+    common()
   ],
 };

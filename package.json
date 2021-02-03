@@ -4,10 +4,10 @@
   "description": "Gorgeous flag components for your Svelte project.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "src/main.js",
+  "svelte": "src/index.js",
   "scripts": {
-      "build": "rollup -c",
-      "dev": "rollup -c -w"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,11 @@
     "flag-pack"
   ],
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
     "rollup": "^2.38.4",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-svg": "^2.0.0",
     "svelte": "^3.32.1"
   },
   "dependencies": {
