@@ -1,0 +1,41 @@
+{
+  "name": "svelte-flagpack",
+  "version": "0.1.0",
+  "description": "Gorgeous flag components for your Svelte project.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/main.js",
+  "scripts": {
+      "build": "rollup -c",
+      "dev": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yummygum/svelte-flagpack.git"
+  },
+  "author": "Yummygum,",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yummygum/svelte-flagpack/issues"
+  },
+  "homepage": "https://github.com/Yummygum/svelte-flagpack#readme",
+  "keywords": [
+    "svelte",
+    "svelte-component",
+    "languages",
+    "flag",
+    "iso",
+    "flag set",
+    "countries",
+    "flag-pack"
+  ],
+  "devDependencies": {
+    "rollup": "^2.38.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.32.1"
+  },
+  "dependencies": {
+    "flagpack-core": "^1.0.0"
+  }
+}
