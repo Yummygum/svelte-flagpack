@@ -10,12 +10,14 @@
   export let className
 
   const url = imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase()).default
+
+  const lower = (q) => q.toLowerCase()
 </script>
 
 <div class={`
   flag
-  ${gradient}
-  size-${size}
+  ${lower(gradient)}
+  size-${lower(size)}
   ${hasBorder ? 'border' : ''}
   ${hasDropShadow ? 'drop-shadow' : ''}
   ${hasBorderRadius ? 'border-radius' : ''}
