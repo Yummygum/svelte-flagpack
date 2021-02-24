@@ -1,10 +1,9 @@
 {
   "name": "svelte-flagpack",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Gorgeous flag components for your Svelte project.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "src/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w"
@@ -31,11 +30,13 @@
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
+    "node-sass": "^5.0.0",
     "rollup": "^2.38.4",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-svg": "^2.0.0",
-    "svelte": "^3.32.1"
+    "svelte": "^3.32.1",
+    "svelte-preprocess-sass": "^1.0.0"
   },
   "dependencies": {
     "flagpack-core": "^1.0.0"
