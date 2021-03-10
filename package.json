@@ -4,6 +4,7 @@
   "description": "Gorgeous flag components for your Svelte project.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "svelte": "src/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w"
@@ -40,5 +41,9 @@
   },
   "dependencies": {
     "flagpack-core": "^1.0.0"
-  }
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
 }
