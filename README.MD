@@ -7,6 +7,20 @@ Flagpack contains 260+ flag icons to easily use within your code project. Flagpa
 [View documentation on flagpack.xyz](https://flagpack.xyz/docs/)
 
 ## svelte-flagpack
+<p>
+  <a href="https://www.npmjs.com/package/svelte-flagpack" target="_blank">
+    <img src="https://img.shields.io/npm/v/svelte-flagpack.svg?style=flat" />
+  </a>
+  <a href="https://www.npmjs.com/package/svelte-flagpack" target="_blank">
+    <img src="https://img.shields.io/npm/dt/svelte-flagpack.svg?style=flat" />
+  </a>
+  <a href="https://github.com/sponsors/Yummygum" target="_blank">
+    <img src="https://img.shields.io/badge/Support-♥-E94AAA"  />
+  </a>
+  <a href="https://twitter.com/flagpack" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/flagpack.svg?style=social&label=follow"  />
+  </a>
+</p>
 
 ## Installation
 
