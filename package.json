@@ -36,9 +36,10 @@
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-svg": "^2.0.0",
     "svelte": "^3.32.1",
+    "svelte-inline-svg": "^1.0.8",
     "svelte-preprocess-sass": "^1.0.0"
   },
   "dependencies": {
-    "flagpack-core": "^1.0.0"
+    "flagpack-core": "^2.0.0"
   }
 }

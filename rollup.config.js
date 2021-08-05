@@ -9,8 +9,9 @@ const pkg = require('./package.json');
 export default {
   input: 'src/Flag.svelte',
   output: [
-    { file: pkg.module, 'format': 'es' },
-    { file: pkg.main, 'format': 'umd', name: 'Flag' }
+    { file: pkg.module, 'format': 'es', inlineDynamicImports: true },
+    { file: pkg.main, 'format': 'umd', name: 'Flag', inlineDynamicImports: true },
+
   ],
   plugins: [
     svelte({
@@ -19,7 +20,7 @@ export default {
         style: sass(),
       },
     }),
-    svg(),
+    svg({base64: true}),
     resolve(),
     common()
   ],
