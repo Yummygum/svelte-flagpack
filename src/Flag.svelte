@@ -9,9 +9,10 @@
   export let hasBorderRadius = true
   export let className
 
-  const url = imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase()).default
-
   const lower = (q) => q.toLowerCase()
+  const upper = (q) => q.toUpperCase()
+
+  $: url = imageUrl(upper(isoToCountryCode(code)), lower(size)).default
 </script>
 
 <div class={`
