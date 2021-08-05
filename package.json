@@ -4,6 +4,7 @@
   "description": "Gorgeous flag components for your Svelte project.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "svelte": "src/Flag.svelte",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w"
