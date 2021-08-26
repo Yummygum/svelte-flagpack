@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import svg from 'rollup-plugin-svg';
 import common from '@rollup/plugin-commonjs';
 import { sass } from 'svelte-preprocess-sass';
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 const pkg = require('./package.json');
 
@@ -21,6 +22,7 @@ export default {
       },
     }),
     svg({base64: true}),
+    dynamicImportVars(),
     resolve(),
     common()
   ],

@@ -7,7 +7,8 @@
   export let hasBorder = true
   export let hasDropShadow = false
   export let hasBorderRadius = true
-  export let className
+  let className
+  export { className as class }
 
   const lower = (q) => q.toLowerCase()
   $: gradient = lower(gradient)
@@ -16,7 +17,7 @@
   let Flag
 
   async function importFlag (size, code){
-    return import(`flagpack-core/lib/flags/l/NL.svg`)
+    return import(`./dist/flags/${size}/${code}.svg`)
     .then(res => res.default)
   }
 </script>
@@ -33,7 +34,6 @@
 
   {#await importFlag(size, code) then Flag}
     <img src="{Flag}" alt={`Flag of ${code}`}/>
-    {console.log(Flag)}
   {/await}
 
 </div>
@@ -57,8 +57,8 @@
   box-sizing: border-box;
   align-items: center;
 
-  * {
-    display: flex;
+  img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
