@@ -33,6 +33,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-dynamic-import-vars": "^1.4.0",
+    "flagpack-core": "^2.0.0",
     "node-sass": "^6.0.1",
     "rollup": "^2.38.4",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -41,8 +42,5 @@
     "svelte": "^3.32.1",
     "svelte-inline-svg": "^1.0.8",
     "svelte-preprocess-sass": "^1.0.0"
-  },
-  "dependencies": {
-    "flagpack-core": "^2.0.0"
   }
 }
