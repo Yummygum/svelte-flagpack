@@ -6,7 +6,7 @@
   "module": "dist/index.mjs",
   "svelte": "src/Flag.svelte",
   "scripts": {
-    "build": "rollup -c && npm run generate-flags",
+    "build": "cross-env NODE_ENV=production rollup -c && npm run generate-flags",
     "dev": "rollup -c -w",
     "generate-flags": "node ./src/generate-flags.js"
   },
@@ -34,10 +34,13 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-dynamic-import-vars": "^1.4.0",
+    "cross-env": "^7.0.3",
     "flagpack-core": "^2.0.0",
     "node-sass": "^6.0.1",
     "rollup": "^2.38.4",
+    "rollup-plugin-babel-minify": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-svg": "^2.0.0",
     "svelte": "^3.32.1",
