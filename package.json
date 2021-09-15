@@ -6,13 +6,15 @@
   "module": "dist/index.mjs",
   "svelte": "src/Flag.svelte",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "build": "rollup -c && npm run generate-flags",
+    "dev": "rollup -c -w",
+    "generate-flags": "node ./src/generate-flags.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yummygum/svelte-flagpack.git"
   },
+  "type": "module",
   "author": "Yummygum,",
   "license": "MIT",
   "bugs": {
@@ -31,15 +33,15 @@
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
-    "node-sass": "^5.0.0",
+    "@rollup/plugin-dynamic-import-vars": "^1.4.0",
+    "flagpack-core": "^2.0.0",
+    "node-sass": "^6.0.1",
     "rollup": "^2.38.4",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-svg": "^2.0.0",
     "svelte": "^3.32.1",
+    "svelte-inline-svg": "^1.0.8",
     "svelte-preprocess-sass": "^1.0.0"
-  },
-  "dependencies": {
-    "flagpack-core": "^1.0.0"
   }
 }

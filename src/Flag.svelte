@@ -1,5 +1,5 @@
 <script>
-  import { isoToCountryCode, imageUrl } from 'flagpack-core'
+  import { onMount } from 'svelte';
 
   export let code = "NL"
   export let size = "m"
@@ -7,23 +7,35 @@
   export let hasBorder = true
   export let hasDropShadow = false
   export let hasBorderRadius = true
-  export let className
-
-  const url = imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase()).default
+  let className
+  export { className as class }
 
   const lower = (q) => q.toLowerCase()
+  $: gradient = lower(gradient)
+  $: size = lower(size)
+
+  let Flag
+
+  async function importFlag (size, code){
+    return import(`./dist/flags/${size}/${code}.svg`)
+    .then(res => res.default)
+  }
 </script>
 
 <div class={`
   flag
-  ${lower(gradient)}
-  size-${lower(size)}
+  ${gradient}
+  size-${size}
   ${hasBorder ? 'border' : ''}
   ${hasDropShadow ? 'drop-shadow' : ''}
   ${hasBorderRadius ? 'border-radius' : ''}
   ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}
 `}>
-  {@html url}
+
+  {#await importFlag(size, code) then Flag}
+    <img src="{Flag}" alt={`Flag of ${code}`}/>
+  {/await}
+
 </div>
 
 <style type="text/scss">
@@ -43,6 +55,14 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  align-items: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &.size {
     &-s {
@@ -133,11 +153,5 @@
     }
   }
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 </style>

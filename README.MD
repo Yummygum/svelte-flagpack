@@ -1,8 +1,8 @@
 # Flagpack
 
-Flagpack contains 260+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries Angular, Vue, Svelte and React.
+Flagpack contains 250+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries Angular, Vue, Svelte and React.
 
-![Flagpack. 260+ easily implementable flag icons to use in your design or code project. Open Source. Available for Sketch, Figma, Angular, Vue, Svelte and React. [www.flagpack.xyz](https://www.flagpack.xyz). Made with love by Yummygum. Graphic showing a list with the flags of Argentina, Croatia, Estonia, Kenia, Netherlands, and Scotland.](https://flagpack.xyz/meta-image.png)
+![Flagpack. 250+ easily implementable flag icons to use in your design or code project. Open Source. Available for Sketch, Figma, Angular, Vue, Svelte and React. [www.flagpack.xyz](https://www.flagpack.xyz). Made with love by Yummygum. Graphic showing a list with the flags of Argentina, Croatia, Estonia, Kenia, Netherlands, and Scotland.](https://flagpack.xyz/meta-image.png)
 
 [View documentation on flagpack.xyz](https://flagpack.xyz/docs/)
 
@@ -25,7 +25,7 @@ Flagpack contains 260+ flag icons to easily use within your code project. Flagpa
 ## Installation
 
 ```bash
-npm install svelte-flagpack --save
+$: npm install svelte-flagpack --save
 ```
 
 ## Usage
@@ -62,27 +62,27 @@ import Flag from 'svelte-flagpack'
 ## Build
 ```bash
 # install dependencies
-npm install
+$: npm install
 
 # build for prod
-npm run build
+$: npm run build
 
 # build with watcher for dev
-npm run dev
+$: npm run dev
 ```
 
 ## Releasing
 To release a new version you'll need to make sure all changes commits are done and pushed. After that you'll need to decide which release type you want to use. The release types are; patch (0.0.1), minor (0.1.0), or major (1.0.0).
 ```
-npm version <release_type>
+$: npm version <release_type>
 ```
 This will update the version number in the `package.json`, and will add a git tag automatically. Next you'll need to push the git tag to the remote.
 ```
-git push --tags origin main
+$: git push --tags origin main
 ```
 After that you'll need to publish to npm.
 ```
-npm publish
+$: npm publish
 ```
 
 When you're confident with the release, make sure the version tag is also released at GitHub.
@@ -99,7 +99,7 @@ You can find a changelog of Flagpack's releases on the [Releases page](https://g
 
 ## Contribute
 
-If you're interested in contributing to this project, great! Please see the [contributing document](CONTRIBUTING.md).
+If you're interested in contributing to this project, great! Please see the [contributing document](CONTRIBUTING.md) how to set up you up.
 
 ## License
 
