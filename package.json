@@ -4,7 +4,11 @@
   "description": "Gorgeous flag components for your Svelte project.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "src/Flag.svelte",
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup -c && npm run generate-flags",
     "dev": "rollup -c -w",
