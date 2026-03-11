@@ -36,7 +36,7 @@
     "@rollup/plugin-dynamic-import-vars": "^1.4.0",
     "cross-env": "^7.0.3",
     "flagpack-core": "^2.0.0",
-    "node-sass": "^6.0.1",
+    "node-sass": "^9.0.0",
     "rollup": "^2.38.4",
     "rollup-plugin-babel-minify": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
